@@ -87,6 +87,7 @@ return the max cycle length in the range [i, j]
         if cycleLength > finalMax:
             finalMax = cycleLength
 
+    assert finalMax > 0
     return finalMax
 
 
