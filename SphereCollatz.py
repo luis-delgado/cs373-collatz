@@ -40,55 +40,42 @@ return the max cycle length in the range [i, j]
     assert i > 0
     assert j > 0
 
-    if i < j:
-        list = [None] * (j - i + 1)
+    table = [1, 2, 8, 3, 6, 9, 17, 4, 20, 7, 15, 10, 10, 18, 18, 5, 13, 21, 21, 8]
+    
+    if i <= j:
+        if (j/2) > i :
+            i = (j/2)
         min = i
         max = j
 
-    elif j < i:
-        list = [None] * (i - j + 1)
-        min = j
-        max = i
-
     else:
-        list = [None]
-        min = i
-        max = i
+        if (i/2) > j :
+            j = (i/2)
+        min = j
+        max = i    
 
-    finalMax = -1
-
-    for z in range (min, max + 1):
-
-        cycleLength = 0
-        temp = z
-        exit = 0
-
-        while temp != 1 and exit == 0:
-
-            if (temp - min) >= 0 and (temp-min) < len(list) and list[temp - min] != None:
-                cycleLength += list[temp - min]
-                exit = 1
-
+    trueMax = 1
+    for z in range(min, max+1):
+        currentCycleLength = 0
+        while z != 1:
+            if z < 20:
+                #value is already in cache
+                currentCycleLength = currentCycleLength + table[z-1]
+                z = 1
             else:
-                if temp % 2 == 0:
-                    temp = temp / 2
-
+                #compute
+                if (z % 2) != 1 :
+                    z = z / 2
+                    currentCycleLength = currentCycleLength + 1
                 else:
-                    temp = temp * 3
-                    temp = temp + 1
+                    z = ((3 * z) + 1)/2
+                    currentCycleLength = currentCycleLength + 2
+                    
+        if currentCycleLength > trueMax:
+            trueMax = currentCycleLength;
 
-                cycleLength = cycleLength + 1
-
-        if exit == 0:
-            cycleLength = cycleLength + 1
-
-        list[z-min] = cycleLength
-
-        if cycleLength > finalMax:
-            finalMax = cycleLength
-
-    assert finalMax > 0
-    return finalMax
+    assert trueMax > 0
+    return trueMax
 
 
 # -------------
