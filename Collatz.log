@@ -1,3 +1,63 @@
+commit b81bad26b7c681c45a20f1e0e3518f9f16e1b2cb
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Tue Jan 28 12:09:42 2014 -0600
+
+    Pushing updated version of Collatz
+
+commit a16a4c71f1b684e973f01f546cf3ab19e61932b8
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Thu Jan 23 11:13:24 2014 -0600
+
+    Pushing makefile
+
+commit e9906d2c9775f6cb67147796e008d31a5f53d66f
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Wed Jan 22 15:31:51 2014 -0600
+
+    Deleting make
+
+commit e1bd884bcd4cc83c0b357b315b6cd4263a10dfa7
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Wed Jan 22 11:04:06 2014 -0600
+
+    Updating
+
+commit c47c2e4731d64ea597b893602ab965ed5ee6d093
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Tue Jan 21 15:50:38 2014 -0600
+
+    Final version
+
+commit f01f6a9494790cd03f8c345d00d00277dfea76af
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Tue Jan 21 15:44:07 2014 -0600
+
+    Updating and deleting .py.out
+
+commit 7d9f41d1127dab0ff3c95d75d0e1df0d89968fe1
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Tue Jan 21 15:15:28 2014 -0600
+
+    Pushing new tests and updated makefile
+
+commit 1b9ec7bdfa2cd82860bc62247a707279f2b5eb0d
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Tue Jan 21 15:04:19 2014 -0600
+
+    Pushing updated makefile
+
+commit 593bc2f55576802b098ad651a8d943a990e48e0e
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Tue Jan 21 14:54:32 2014 -0600
+
+    Pushing Collatz version with assertions included
+
+commit 00d995a1bc49eb7824238382f01d8f7a3161f28f
+Author: Luis Delgado <delgadoluise@hotmail.com>
+Date:   Tue Jan 21 11:39:25 2014 -0600
+
+    Uploading log file and updated Collatz
+
 commit 89b402f1ef651ae2d2e699f85ce5e561e38d8593
 Author: Luis Delgado <delgadoluise@hotmail.com>
 Date:   Mon Jan 20 23:46:23 2014 -0600
