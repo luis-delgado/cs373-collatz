@@ -33,45 +33,57 @@ return true if that succeeds, false otherwise
 
 def collatz_eval (i, j) :
     """
-i is the beginning of the range, inclusive
-j is the end of the range, inclusive
-return the max cycle length in the range [i, j]
-"""
+    i is the beginning of the range, inclusive
+    j is the end       of the range, inclusive
+    return the max cycle length in the range [i, j]
+    """
     assert i > 0
     assert j > 0
-    
-    table = [1, 2, 8, 3, 6, 9, 17, 4, 20, 7, 15, 10, 10, 18, 18, 5, 13, 21, 21, 8]
-    
-    if i <= j:
-        if (j/2) > i :
-            i = (j/2)
-        min = i
-        max = j
 
-    else:
-        if (i/2) > j :
-            j = (i/2)
-        min = j
-        max = i    
+    table = [1, 2, 8, 3, 6, 9, 17, 4, 20, 7, 15, 10, 10, 18, 18, 5, 13, 21, 21, 8]
+
+    if i <= j :
+        temp = j / 2
+        if  temp > i:
+            i = temp
+        myMin = i
+        myMax = j
+
+    else :
+        temp = i / 2
+        if  temp > j:
+            j = temp
+        myMin = j
+        myMax = i
 
     trueMax = 1
-    for z in range(min, max+1):
+
+    for z in range(myMin, myMax+1):
+    
         currentCycleLength = 0
+    
         while z != 1:
+
             if z < 20:
+                
                 #value is already in cache
-                currentCycleLength = currentCycleLength + table[z-1]
+                currentCycleLength = currentCycleLength + table[z - 1]
                 z = 1
+            
             else:
+            
                 #compute
-                if (z % 2) != 1 :
-                    z = z / 2
+                if (z % 2) != 1:
+            
                     currentCycleLength = currentCycleLength + 1
+                    z = (z / 2)
+            
                 else:
-                    z = ((3 * z) + 1)/2
+            
                     currentCycleLength = currentCycleLength + 2
-                    
-        if currentCycleLength > trueMax:
+                    z = ((3 * z) + 1) / 2
+        
+        if currentCycleLength > trueMax :
             trueMax = currentCycleLength;
 
     assert trueMax > 0
